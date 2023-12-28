@@ -1,0 +1,262 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.home-main {
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-banner {
+    position: absolute;
+    bottom: 0;
+
+    width: 800px;
+
+    animation: banner 1s linear;
+}
+
+@keyframes banner {
+    0% {
+        transform: translateY(400px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main-wave-1 {
+    position: absolute;
+    left: -150px;
+    bottom: -50px;
+    z-index: -1;
+    width: 800px;
+
+    animation: wave-1 .7s linear;
+}
+
+@keyframes wave-1 {
+    0% {
+        transform: translateY(400px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main-wave-2 {
+    position: absolute;
+    right: -190px;
+    top: -50px;
+    z-index: -1;
+    width: 800px;
+
+    animation: wave-2 .7s linear;
+
+}
+
+@keyframes wave-2 {
+    0% {
+        transform: translateY(-400px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main-cta {
+    position: absolute;
+    top: 100px;
+
+    background: linear-gradient(90deg, rgb(129, 1, 154), rgb(0, 0, 136));
+    color: white;
+    padding: 20px 100px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 25px;
+
+    font-weight: 1000;
+
+    transition: all .5s;
+}
+
+.main-cta:hover {
+    transform: scale(1.05);
+}
+
+.cta-button {
+    text-transform: uppercase;
+}
+
+.main-icon{
+    position: absolute;
+    width: 120px;
+    z-index: -1;
+}
+
+.icon-1{
+    top: -50px;
+    left: -50px;
+
+    width: 250px;
+}
+.icon-2{
+    top: -50px;
+    left: 170px;
+}
+
+.icon-3{
+    top: 80px;
+    left: 200px;
+
+    width: 50px;
+
+    animation: bubble 1s linear;
+}
+
+@keyframes bubble {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.icon-4{
+    bottom: -50px;
+    right: -50px;
+
+    
+    width: 250px;
+}
+
+.icon-5{
+    bottom: -50px;
+    right: 170px;
+}
+
+.icon-6{
+    bottom: 80px;
+    right: 200px;
+
+    width: 50px;
+
+    animation: bubble 1s linear;
+}
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 1440px) {
+    .main-cta{
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-cta{
+        top: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-cta{
+        top: 240px;
+    }
+
+    .icon-1{
+        left: -100px;
+    }
+    .icon-2{
+        top: 170px;
+        left: -50px;
+    }
+    .icon-3{
+        top: 200px;
+        left: 100px;
+    }
+
+    .icon-4{
+        right: -100px;
+    }
+    .icon-5{
+        bottom: 170px;
+        right: -50px;
+    }
+    .icon-6{
+        bottom: 200px;
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .main-wave-1{
+        width: 900px;
+        bottom: 0;
+        left: 0;
+    }
+
+    .main-wave-2{
+        width: 900px;
+        top: -10px;
+        right: -10px;
+    }
+
+    .main-cta {
+        top: 350px;
+    }
+
+    .main-icon{
+        width: 80px;
+    }
+
+    .icon-1{
+        top: 270px;
+        left: 20px;
+
+        width: 130px;
+    }
+    .icon-2{
+        left: 120px;
+        top: 290px;
+    }
+
+    .icon-3{
+        width: 40px;
+
+        top: 230px;
+        left: 140px;
+    }
+
+    .icon-4{
+        bottom: 350px;
+        right: 30px;
+
+        width: 130px;
+    }
+
+    .icon-5{
+        right: 120px;
+        bottom: 370px;
+    }
+
+    .icon-6 {
+        width: 40px;
+
+        bottom: 300px;
+        right: 130px;
+    }
+}
